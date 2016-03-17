@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算矩形面积-输入框</title>
+	</head>
+	<body>
+		宽度:<input type="text" id="t1"><br> 
+		高度:<input type="text" id="t2"><br>
+		<input type="button" value="计算矩形面积" onclick="calc()"><br>
+		结果:<input type="text" id="t3">
+		<script>
+			function calc()
+			{
+				//alert("test ok")
+				//1.获取用户输入的高度
+				var width = document.getElementById("t1").value;
+				//alert(width)
+				//2.获取用户输入的宽度
+				var height = document.getElementById("t2").value;
+				//3.计算面积
+				var square = width*height;
+				//4.将面积输出到结果的文本框中
+				//alert("面积 = "+square);
+				document.getElementById("t3").value = square;
+			}
+		</script>
+	</body>
+</html>

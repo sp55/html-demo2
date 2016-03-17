@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js程序流程分支</title>
+	</head>
+	<body>
+		<h1>判断学生成绩</h1>
+		成绩:<input type="text" id="score"><br>
+		<input type="button" value="判定" onclick="fun1()"><br>
+		<script>
+		function fun1(){
+			//获取用户输入的分数
+			var inputScore = document.getElementById("score").value;
+			//alert(inputScore);
+			if(inputScore>=60){
+				alert("成绩合格");
+			}else{
+				alert("对不起，成绩不合格");
+			}
+		}
+			
+		</script>
+			
+	</body>
+</html>

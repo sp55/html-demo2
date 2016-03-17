@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组的使用和对象</title>
+	</head>
+	<body>
+		<h1>数组的使用和对象</h1>
+		<script>
+			var score = [55,66,77,88,99,100,11,22,33,44];
+			document.write("数组的长度"+score.length);
+			//输出的数组的所有元素的值
+			for (var n=0;n<score.length;n++) {
+				document.write("第"+n+"个学生的成绩"+score[n]+"<br>")
+			}
+			//求这10个学生的最高分
+			var max = score[0];//默认第一个学生的分数最高
+			for (var n=1;n<score.length;n++) {
+				if(score[n]>max){
+					max = score[n];
+				}
+			}
+			document.write("最高分="+max);
+			
+			
+			//冒泡排序
+			for (var i=0;i<score.length-1;i++) {
+				for (var j=i+1;j<score.length;j++) {
+					if(score[j]<score[i]){
+						var temp;
+						temp = score[i];
+						score[i] = score[j];
+						score[j] = temp;
+					}
+				}	
+			}
+			//输出
+			document.write("<br><h2>冒泡排序之后从低到高的学生成绩</h2><br>");
+			for (var n=0;n<score.length;n++) {
+				document.write("第"+n+"个学生的成绩"+score[n]+"<br>");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品竞猜游戏</title>
+	</head>
+	<body>
+		<h1>商品竞猜</h1>
+		<p>规则:</p>
+		<ul>
+			<li>1.随机产生一个商品的价格200~300</li>
+			<li>2.用户竞猜10次</li>
+			<li>3.如果用户输入的价格大于产品的价格提示对不起大了</li>
+			<li>4.如果用户输入的价格小于产品的价格提示对不起小了</li>
+			<li>5.如果用户输入的价格等于产品的价格提示恭喜</li>
+			<li>6.如果用户10次都没有输对，GAMEOVER</li>
+		</ul>
+		<script>
+			//商品价格
+			var price = parseInt(Math.random()*100+200);
+			//alert(price);
+			for (var n=1;n<=10;n++) {
+				var userinput =window.prompt("请输入商品价格","");
+				var valinput = parseInt(userinput);
+				if(valinput>price){
+					document.write("对不起,"+valinput+"大了。<br>");
+				} 
+				if(valinput<price){
+					document.write("对不起,"+valinput+"小了。<br>");
+				}
+				if(valinput==price){
+					document.write("恭喜猜中了，一共猜了"+n+"次");
+					alert("恭喜猜中了，一共猜了"+n+"次");
+					break;
+				}
+			}
+		</script>
+		
+	</body>
+</html>
